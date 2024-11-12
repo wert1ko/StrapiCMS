@@ -479,6 +479,7 @@ export interface ApiSecondScreenSecondScreen
 export interface ApiSocialSocial extends Struct.CollectionTypeSchema {
   collectionName: 'socials';
   info: {
+    description: '';
     displayName: 'social';
     pluralName: 'socials';
     singularName: 'social';
@@ -494,6 +495,7 @@ export interface ApiSocialSocial extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
