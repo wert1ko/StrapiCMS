@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: strapi
+    env: node
+    buildCommand: yarn install
+    startCommand: yarn start
+    envVars:
+      - key: DATABASE_CLIENT
+        value: postgres
+      - key: DATABASE_URL
+        value: postgresql://strapi_db_xfb2_user:eABMKTgUIP4GFDH5s5yp0jPQDGEo5W9j@dpg-cspldkl2ng1s73d2vupg-a/strapi_db_xfb2
