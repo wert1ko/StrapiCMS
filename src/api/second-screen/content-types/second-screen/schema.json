@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "second_screens",
+  "info": {
+    "singularName": "second-screen",
+    "pluralName": "second-screens",
+    "displayName": "SecondScreen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "firstBlock": {
+      "type": "string"
+    },
+    "secondBlock": {
+      "type": "string"
+    },
+    "thirdBlock": {
+      "type": "string"
+    }
+  }
+}

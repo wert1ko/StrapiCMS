@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_screeens",
+  "info": {
+    "singularName": "home-screeen",
+    "pluralName": "home-screeens",
+    "displayName": "HomeScreeen",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "isButton": {
+      "type": "boolean"
+    },
+    "buttontText": {
+      "type": "string"
+    },
+    "bittonLink": {
+      "type": "string"
+    },
+    "memberImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

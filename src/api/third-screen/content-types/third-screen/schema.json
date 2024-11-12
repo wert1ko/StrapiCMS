@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "third_screens",
+  "info": {
+    "singularName": "third-screen",
+    "pluralName": "third-screens",
+    "displayName": "ThirdScreen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "firstBlock": {
+      "type": "string"
+    },
+    "secondBlock": {
+      "type": "string"
+    },
+    "thirdBlock": {
+      "type": "string"
+    },
+    "fourthBlock": {
+      "type": "string"
+    },
+    "fifthBlock": {
+      "type": "string"
+    },
+    "sixthBlock": {
+      "type": "string"
+    },
+    "isButton": {
+      "type": "boolean"
+    },
+    "buttontText": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "string"
+    }
+  }
+}
