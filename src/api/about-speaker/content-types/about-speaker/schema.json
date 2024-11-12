@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_speakers",
+  "info": {
+    "singularName": "about-speaker",
+    "pluralName": "about-speakers",
+    "displayName": "AboutSpeaker"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "speakerImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "desc1": {
+      "type": "string"
+    },
+    "desc2": {
+      "type": "string"
+    },
+    "desc3": {
+      "type": "string"
+    },
+    "isSocial": {
+      "type": "boolean"
+    }
+  }
+}
