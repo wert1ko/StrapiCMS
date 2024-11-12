@@ -381,6 +381,7 @@ export interface ApiHomeScreeenHomeScreeen extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    bgImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     bittonLink: Schema.Attribute.String;
     buttontText: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;

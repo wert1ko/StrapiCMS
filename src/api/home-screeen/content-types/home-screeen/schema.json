@@ -42,6 +42,17 @@
       "type": "string"
     },
     "memberImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bgImage": {
       "allowedTypes": [
         "images",
         "files",
