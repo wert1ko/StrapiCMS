@@ -405,6 +405,35 @@ export interface ApiAboutSpeakerAboutSpeaker
   };
 }
 
+export interface ApiCalendarDateCalendarDate
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'calendar_dates';
+  info: {
+    displayName: 'Calendar Date';
+    pluralName: 'calendar-dates';
+    singularName: 'calendar-date';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::calendar-date.calendar-date'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    time: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFormForm extends Struct.CollectionTypeSchema {
   collectionName: 'forms';
   info: {
@@ -1085,6 +1114,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-speaker.about-speaker': ApiAboutSpeakerAboutSpeaker;
+      'api::calendar-date.calendar-date': ApiCalendarDateCalendarDate;
       'api::form.form': ApiFormForm;
       'api::home-screeen.home-screeen': ApiHomeScreeenHomeScreeen;
       'api::second-screen.second-screen': ApiSecondScreenSecondScreen;

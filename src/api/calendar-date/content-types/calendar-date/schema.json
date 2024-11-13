@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calendar_dates",
+  "info": {
+    "singularName": "calendar-date",
+    "pluralName": "calendar-dates",
+    "displayName": "Calendar Date"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "time": {
+      "type": "datetime"
+    }
+  }
+}
