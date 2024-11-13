@@ -567,6 +567,37 @@ export interface ApiSocialSocial extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSuccessModalInfoSuccessModalInfo
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'success_modal_infos';
+  info: {
+    displayName: 'Success Modal Info';
+    pluralName: 'success-modal-infos';
+    singularName: 'success-modal-info';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::success-modal-info.success-modal-info'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface ApiThirdScreenThirdScreen extends Struct.CollectionTypeSchema {
   collectionName: 'third_screens';
   info: {
@@ -1119,6 +1150,7 @@ declare module '@strapi/strapi' {
       'api::home-screeen.home-screeen': ApiHomeScreeenHomeScreeen;
       'api::second-screen.second-screen': ApiSecondScreenSecondScreen;
       'api::social.social': ApiSocialSocial;
+      'api::success-modal-info.success-modal-info': ApiSuccessModalInfoSuccessModalInfo;
       'api::third-screen.third-screen': ApiThirdScreenThirdScreen;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
