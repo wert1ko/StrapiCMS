@@ -405,6 +405,34 @@ export interface ApiAboutSpeakerAboutSpeaker
   };
 }
 
+export interface ApiFormForm extends Struct.CollectionTypeSchema {
+  collectionName: 'forms';
+  info: {
+    displayName: 'Form';
+    pluralName: 'forms';
+    singularName: 'form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::form.form'> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    phoneNumber: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    typeOfActivity: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomeScreeenHomeScreeen extends Struct.CollectionTypeSchema {
   collectionName: 'home_screeens';
   info: {
@@ -1057,6 +1085,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-speaker.about-speaker': ApiAboutSpeakerAboutSpeaker;
+      'api::form.form': ApiFormForm;
       'api::home-screeen.home-screeen': ApiHomeScreeenHomeScreeen;
       'api::second-screen.second-screen': ApiSecondScreenSecondScreen;
       'api::social.social': ApiSocialSocial;
